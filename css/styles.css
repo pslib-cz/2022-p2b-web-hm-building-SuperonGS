@@ -1,0 +1,40 @@
+@font-face{
+    font-family: 'Open sans';
+    src:url(../fonts/open-sans.ttf)
+}
+.top{
+    padding: 1.5em;
+    padding-bottom: 2em;
+}
+.top__logo{
+    
+}
+.header__background{
+    width: 100%;
+}
+.header__title{
+    position: relative;
+    top: 36%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+.upper__title{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 41px;
+    color: white;
+    margin: 0;
+}
+.lower__title{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: -0.05em;
+    color: white;
+    margin: 0;
+}
