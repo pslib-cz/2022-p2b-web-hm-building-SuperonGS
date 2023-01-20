@@ -158,6 +158,7 @@ body {
 .services{
     display:flex;
     flex-direction: column;
+    gap: 80px;
 }
 .service{
     display: grid;
@@ -183,17 +184,54 @@ body {
     font-size: 16px;
     line-height: 22px;
     color: var(--grid-text);
+    padding-bottom: 20px;
 }
 .btn--secondary{
     text-decoration: none;
     color: var(--primary);
     padding: 12px 40px;
     gap: 10px;
+    font-weight: 600;
 
     /* nějaká divná stránka - ale funguje*/
     background-image: repeating-linear-gradient(4deg, var(--primary), var(--primary) 18px, transparent 18px, transparent 36px, var(--primary) 36px), repeating-linear-gradient(94deg, var(--primary), var(--primary) 18px, transparent 18px, transparent 36px, var(--primary) 36px), repeating-linear-gradient(184deg, var(--primary), var(--primary) 18px, transparent 18px, transparent 36px, var(--primary) 36px), repeating-linear-gradient(274deg, var(--primary), var(--primary) 18px, transparent 18px, transparent 36px, var(--primary) 36px);
     background-size: 1px 100%, 100% 1px, 1px 100% , 100% 1px;
     background-position: 0 0, 0 0, 100% 0, 0 100%;
     background-repeat: no-repeat;
+}   
+.promo{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/add-background.jpg);
+    background-size: cover;
+    background-position: center center;
+    width: 84vw;
+    height: 12vw;
+    background-repeat: no-repeat;
+    padding: 8%;
+    margin-top: 15%;
+}
+.promo p{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1px;
+    color: #ffffff;
+}
+.btn--primary-new{
+    font-family: 'Open Sans';
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--primary);
+    color: var(--bg);
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    padding: 20px 80px;
+    font-weight: 600;
+    margin-top: 2em;
+    max-width: 120px;
 }
 
