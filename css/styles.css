@@ -15,6 +15,7 @@ body {
     margin: 0;
     scrollbar-width: none;
     font-family: 'Open sans';
+    overflow-x: hidden;
 }
 .top--header{
     height: 98vh;
@@ -227,7 +228,7 @@ body {
     background-color: #888888;
     background-size: cover;
     background-position: center center;
-
+    
     height: 20vh;
     padding: 10em;
     margin-top: 5em;
@@ -236,7 +237,7 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 700;
     color: #ffffff;
 }
 .btn--primary-new{
@@ -411,6 +412,34 @@ li::marker {
     margin-left: 8em;
 }
 
+/*Kontakty*/
+.kontakty--text{
+    text-align: center;
+    font-size: 16px;
+}
+.kontakty-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.kontakty{
+    display: flex;
+    flex-direction: column;
+}
+.kontakty span{
+    display: flex;
+    align-items: center;
+}
+.kontakty span::before{
+    display: block;
+    margin-right: 20px;
+    content: " ";
+    background-color: var(--primary);
+    
+
+}
+.form > p{
+    color: var(--space-text);
+}
 
 
 /*MOBILE*/
@@ -509,11 +538,10 @@ li::marker {
         padding: 2em;
         background-size: cover;
 	    background-position: center center;
-        width: 120%;
     }
     .promo p{
-        font-size: 17px;
-        max-width: 80%;
+        font-size: 18px;
+        max-width: 75vw;
     }
     .btn--primary-new{
         align-self: left;
@@ -558,4 +586,8 @@ li::marker {
         height: 12vh;
     }
     
+    /*Kontakty*/
+    .kontakty-grid {
+        grid-template-columns: 1fr;
+    }
 }
