@@ -6,51 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <title>Rekonstrukce domů</title>
+    <title>Kontakty</title>
 </head>
 <body>
-    <header class="header--sluzby">
+    <header class="top--header header--alt">
         <nav class="navbar">
-            <img class="navlogo" src="img/logo.png" alt="icon">
+            <a href="index.html"><img class="navlogo" src="img/logo.png"></a>
+            <a onclick="Hamburger()" class="hamburger__text" href="javascript:void(0)">MENU</a>
+            <button class="navbar__hamburger" onclick="Hamburger()">&#xe9bd;</button>
+            <ul id="hamburger" class="navbar__hamburger__items">
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="#">Služby</a></li>
+                <li><a href="reference.html">Reference</a></li>
+                <li><a href="o_nas.html">O nás</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
             <div class="navlinks">
                 <a href="index.html" class="navlink">Domů</a> 
-                <a class="navlink active">Služby</a> 
-                <a href="#" class="navlink">Reference</a>  
-                <a href="#" class="navlink">O nás</a>  
-                <a href="#" class="navlink">Kontakt</a> 
+                <a href="#" class="navlink">Služby</a> 
+                <a href="reference.html" class="navlink">Reference</a>  
+                <a href="o_nas.html" class="navlink">O nás</a>  
+                <a href="kontakt.html" class="navlink active">Kontakt</a> 
             </div>
         </nav>
     </header>
-    <main class="sluzby">
-        <h1 class="sluzby--title space--title">Kontaktujte nás</h1>
-            <p class="kontakty--text">Zavolejte anebo nám napište... kvalitní komunikace je jeden z pilířů, na kterém stavíme.</p>
-        <div class="kontakty-grid">
-            <section class="kontakty">
-                <span class="cislo">+420 775 550 564</span>
-                <span class="mail">stavby@hm-building.cz</span>
-                <span class="adresa">Křižanská 12, Liberec XXII-Horní Suchá</span>
-            </section>
-            <img class="service__img " src="img/mapa.jpg" alt="mapa">
-
-            <section class="form">
-                <div class="form--header">
-                    <h3>Nezávazná poptávka služeb</h3>
-                    <p>Plácneme si pro Váš projekt? Nezávazně nás kontaktujte a domluvme vše potřebné.</p>    
-                </div>
-                <p>Jméno a příjmení</p>
-                <p>E-mail</p>
-                <p>Telefon</p>
-                <p>Poptávaná služba</p>
-                <p>Poznámka</p>
-            </section>
+    <div class="space">
+        <div class="space--header">
+            <h1 class="space--title">Kontaktujte nás</b></h1>
+            <section>Zavolejte anebo nám napište... kvalitní komunikace je jeden z pilířů, na kterém stavíme.</section>
         </div>
-    </main>
-    <footer class="footer"> 
-        <div class="footer-text">
-            <p class="footer-heading">Plácneme si pro Váš projekt?  </p>
-            <p class="footer-desc">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+    </div>
+    <div class="kontakty__blok">
+        <section class="kontakty__info">
+            <span><p>+420 775 550 564</p></span>
+            <span><a href="mailto:stavby@hm-building.cz">stavby@hm-building.cz</a></span>
+            <span><a>Křižanská 12, Liberec XXII-Horní Suchá</a></span>
+        </section>
+        <img class="mapa" alt="Mapa naší lokace" src="img/mapa.jpg">
+    </div>
+    <form>
+        <h3>Nezávazná poptávka služeb</h3>
+        <p>Plácneme si pro Váš projekt? Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+        <div class="form__item">
+            <label for="name">Jméno a příjmení</label>
+            <input type="text" id="name" name="name">
         </div>
-        <a class="btn--primary-new" href="#">Nezávazně poptat</a>
-    </footer>
+        <div class="form__item">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="form__item">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form__item">
+             <label for="service">Poptávaná služba</label>
+             <select id="service" name="service">
+                <option value="0">-- Vyberte --</option>
+                <option value="1">Novostavba</option>
+                <option value="2">Průmyslová stavba</option>
+                <option value="3">Rekonstrukce</option>
+                <option value="4">Komunikace a zpevněné plochy</option>
+                <option value="5">Ostatní</option>
+            </select>
+        </div>
+        <div class="form__item">
+            <label for="message">Poznámka</label>
+            <textarea id="message" name="message"></textarea>
+        </div>
+        <div class="form__item">
+            <a class="btn--primary--clear" type="submit">Odeslat nezávaznou poptávku</a>
+         </div>
+    </form>
+     <script>
+        function Hamburger() {
+            document.getElementById("hamburger").classList.toggle("is-active");
+            }
+    </script>
 </body>
 </html>
