@@ -11,19 +11,28 @@
 <body>
     <header class="top--header">
         <nav class="navbar">
-            <img class="navlogo" src="img/logo.png" alt="icon">
+            <a href="index.html"><img class="navlogo" src="img/logo.png"></a>
+            <a onclick="Hamburger()" class="hamburger__text" href="javascript:void(0)">MENU</a>
+            <button class="navbar__hamburger" onclick="Hamburger()">&#xe9bd;</button>
+            <ul id="hamburger" class="navbar__hamburger__items">
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="#services">Služby</a></li>
+                <li><a href="reference.html">Reference</a></li>
+                <li><a href="o_nas.html">O nás</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
             <div class="navlinks">
-                <a class="navlink active">Domů</a> 
-                <a class="navlink">Služby</a> 
-                <a class="navlink">Reference</a>  
-                <a class="navlink">O nás</a>  
+                <a href="index.html" class="navlink active">Domů</a> 
+                <a href="#services" class="navlink">Služby</a> 
+                <a href="reference.html" class="navlink">Reference</a>  
+                <a href="o_nas.html" class="navlink">O nás</a>  
                 <a href="kontakt.html" class="navlink">Kontakt</a> 
             </div>
         </nav>
         <div class="title--text">
             <h1 class="title">HM Building.cz s.r.o.</h1>
             <h2 class="title--second">liberecká stavební společnost</h2>
-            <a href="#" class="btn--primary">pokračovat</a>
+            <a href="#services" class="btn--primary">pokračovat</a>
         </div>
     </header>
     <div class="space">
@@ -34,7 +43,7 @@
                 nebo jen hrubou stavbu. Nejsou nám cizí ani <b>rekonstrukce</b>
                 budov a jejich údržba a to včetně okolních ploch.</section>
         </header>
-        <div class="services">
+        <div id="services" class="services">
             <div class="service">
                 <div class="service__img--holder service__img--left">
                     <img class="service__img " src="img/service-1.jpg" alt="service-1">
@@ -93,7 +102,7 @@
             </section>
         </header>
         <div class="ref__contents">
-            <div class="ref-content">
+            <a href="hasicska_zbrojnice.html"><div class="ref-content">
                 <img class="ref-content__img" alt="Fotka námi předělané hasičské stanice" src="img/reference/hasicska_zbrojnice.jpg">
                 <div class="ref-content__active ">
 					<h3>Hasičská zbrojnice</h3>
@@ -103,8 +112,8 @@
 					<h3>Hasičská zbrojnice</h3>
 					<p>celková rekonstrukce</p>
 				</div>
-            </div>
-            <div class="ref-content">
+            </div></a>
+            <a href="pradelna.html"><div class="ref-content">
                 <img class="ref-content__img" alt="Fotka námi předělané hasičské stanice" src="img/reference/pradelna.jpg">
                 <div class="ref-content__active">
 					<h3>Samoobslužná prádelna</h3>
@@ -114,8 +123,8 @@
 					<h3>Samoobslužná prádelna</h3>
 					<p>stavební úpravy a opravy</p>
 				</div>
-            </div>
-            <div class="ref-content">
+            </div></a>
+            <a href="plochy.html"><div class="ref-content">
                 <img class="ref-content__img" alt="Fotka námi předělané hasičské stanice" src="img/reference/nova_komunikace.jpg">
                 <div class="ref-content__active">
 					<h3>Venkovní plochy Restyl</h3>
@@ -125,7 +134,7 @@
 					<h3>Venkovní plochy Restyl</h3>
 					<p>provedení venkovních ploch</p>
 				</div>
-            </div>
+            </div></a>
         </div>
         <a class="btn--primary-new" href="#">Více referencí</a>
     </section>
@@ -136,5 +145,10 @@
         </div>
         <a class="btn--primary-new" href="#">Nezávazně poptat</a>
     </footer>
+    <script>
+        function Hamburger() {
+            document.getElementById("hamburger").classList.toggle("is-active");
+            }
+    </script>
 </body>
 </html>
