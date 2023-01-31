@@ -15,6 +15,9 @@
     --space-text: #3A3A3A;
     --grid-text: #2B2B2B;
 }
+html{
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     scrollbar-width: none;
@@ -322,6 +325,7 @@ body {
 .ref-content__img{
     display: block;
     width: 100%;
+    margin: 0;
 }
 
 .ref-content__active {
@@ -606,6 +610,9 @@ form p {
 }
 
 @media screen and (max-width: 850px) {
+    .ref-content{
+        max-width: 95vw;
+    }
     .title{
         font-size: 30px;
         line-height: 40px;
@@ -662,6 +669,9 @@ form p {
     }
     .btn--primary-new{
         margin-top: 0;
+    }
+    .ref{
+        width: 80%;
     }
     /*Service*/
     .service{
