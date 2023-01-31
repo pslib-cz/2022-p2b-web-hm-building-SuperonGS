@@ -148,7 +148,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
+
     margin: 0 auto;
     gap: 50px;
     padding-top: 50px;
@@ -337,7 +337,7 @@ body {
     width: 480px;
     
     background-color: rgba(235, 108, 27, 0.8);
-    color: var(--bg);
+    color: var(--space-text);
 
     display: none;
     align-items: center;
@@ -350,6 +350,7 @@ body {
 }
 .ref-content__mobile{
     display: none;
+    color: var(--space-text);
 }
 .ref-content__mobile h3{
     text-align: center;
