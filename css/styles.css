@@ -9,11 +9,11 @@
 
 /*header*/
 :root{
-    --text: #888888;
+    --text--gray: #888888;
     --primary: #EB6C27;
     --bg: #ffffff;
-    --space-text: #3A3A3A;
-    --grid-text: #2B2B2B;
+    --text: #3A3A3A;
+    --services--text: #2B2B2B; /*Ve vaší paletě barev tato barva není ale ve figmě je použita ¯\_(ツ)_/¯*/  
 }
 html{
     scroll-behavior: smooth;
@@ -67,7 +67,7 @@ body {
 }
 .navlink{
     font-family: 'Open Sans';
-    color: var(--text);
+    color: var(--text--gray);
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -117,7 +117,6 @@ body {
     color: var(--bg);
     margin: 0;
 }
-
 .title--second{
     font-family: 'Open Sans';
     font-style: normal;
@@ -139,16 +138,14 @@ body {
     justify-content: center;
     margin-bottom: 5%;
 }
-
 /*page*/
-
 .space
 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    width: 90%;
     margin: 0 auto;
     gap: 50px;
     padding-top: 50px;
@@ -177,7 +174,7 @@ body {
     font-weight: 700;
     font-size: 60px;
     line-height: 82px;
-    color: var(--space-text);
+    color: var(--text);
 }
 .title--bold{
     color: var(--primary);
@@ -192,10 +189,10 @@ body {
     line-height: 27px;
 }
 .desc--bold, b{
-    color: var(--space-text);
+    color: var(--text);
     font-weight: 800;
 }
-/* grid*/
+/*Services*/
 .services{
     display:flex;
     flex-direction: column;
@@ -229,7 +226,7 @@ body {
     font-weight: 700;
     font-size: 30px;
     line-height: 41px;
-    color: var(--grid-title);
+    color: var(--services--text);
 }
 .services p{
     font-family: 'Open Sans';
@@ -237,7 +234,7 @@ body {
     font-weight: 300;
     font-size: 16px;
     line-height: 22px;
-    color: var(--grid-text);
+    color: var(--services--text);
     padding-bottom: 20px;
 }
 .btn--secondary{
@@ -298,11 +295,9 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-	
     width: 90%;
     margin: 0 auto;
     gap: 50px;
-
     padding-top: 50px;
 }
 .ref .btn--primary-new{
@@ -327,30 +322,25 @@ body {
     width: 100%;
     margin: 0;
 }
-
 .ref-content__active {
     position: absolute;
-
     top: 0;
     left: 0;
     height: 298px;
     width: 480px;
-    
     background-color: rgba(235, 108, 27, 0.8);
-    color: var(--space-text);
-
+    color: var(--text);
     display: none;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    
 }
 .ref-content:hover .ref-content__active {
     display: flex;
 }
 .ref-content__mobile{
     display: none;
-    color: var(--space-text);
+    color: var(--text);
 }
 .ref-content__mobile h3{
     text-align: center;
@@ -364,7 +354,6 @@ body {
     font-size: 0.8em;
     margin: 0;
 }
-
 /*footer*/
 .footer{
     display: flex;
@@ -395,11 +384,8 @@ body {
     max-width: 180px;
     padding: 10px, 40px;  
     margin-bottom: 2em;  
-    
 }
 /*SLUZBY INDEX*/
-
-
 .sluzby{
     display: flex;
     flex-direction: column;
@@ -435,7 +421,6 @@ li::marker {
 .list--komunikace{
     margin-left: 8em;
 }
-
 /*Kontakty*/
 .kontakty--text{
     text-align: center;
@@ -456,11 +441,13 @@ li::marker {
 .mapa{
     width: 50%;
 }
+.mapa__img{
+    width: 100%;
+}
 .kontakty__info span{
     display: flex;
     align-items: center;
     font-weight: 700;
-
 }
 span p, a{
     text-decoration: none;
@@ -505,7 +492,6 @@ form label{
     font-size: 12px;
     margin-bottom: 0.5em;
 }
-
 form input{
     padding: 10px;
     border: 1px solid var(--primary);
@@ -553,7 +539,6 @@ form p {
 .form__group a:hover{
     font-size: 0.8em;
 }
-
 /*O nas*/
 .onas{
     max-width: 60%;
@@ -562,8 +547,7 @@ form p {
     padding-top: 20px;
     padding-bottom: 35px;
 }
-
-/*gal*/
+/*gallerie*/
 .services__gal {
     display: grid;                                                     
     grid-template-columns: repeat(auto-fill, 300px);
@@ -585,8 +569,6 @@ form p {
 .gal--text p{
     justify-self: center;
 }
-
-
 /*MOBILE*/
 @media screen and (max-width: 1300px){
     .service{
@@ -686,7 +668,6 @@ form p {
         margin: 0;
         font-size: 15px;
     }
-
     /*Promo*/
     .promo{
         max-height: 15vh;
@@ -744,7 +725,6 @@ form p {
         margin-left: 8%;
         margin-right: 8%;
     }
-    
     /*Kontakty*/
     .kontakty__blok{
         display: flex;
@@ -767,6 +747,9 @@ form p {
         padding-top: 20px;
         margin: 0;
     }
+    .mapa__img{
+        width: 100%;
+    }
     span > p, a{
         font-size: 14px;
     }
@@ -779,7 +762,6 @@ form p {
         margin-right: 0;
         max-width: 100%;
     }
-    
     /*Hamburger <|:*) */
     .navbar__hamburger {
         display: block;
@@ -787,10 +769,8 @@ form p {
         padding-top: 15px;
         border: none;
         background-color: var(--bg);
-
         margin-right: 20px;
         cursor: pointer;
-
         font-family: 'Icons';
         font-size: 2.7em;
         color: var(--primary);
@@ -802,16 +782,14 @@ form p {
         -moz-background-clip: text;
         -moz-text-fill-color: transparent;
     }
-
     .hamburger__text {
         display: block;
         position: absolute;
-        color: var(--space-text);
+        color: var(--text);
         right: calc(20px + ((43.2px - 35.25px) / 2));
         top: 22px;
         font-size: 0.75em;
     }
-
     .navbar__hamburger__items {
         display: none;
         list-style-type: none; 
@@ -825,7 +803,6 @@ form p {
         right: 0;
         margin: 0 1em;
     }
-
     .navbar__hamburger__items::before {
         content: " ";
         width: 0; 
@@ -838,17 +815,14 @@ form p {
         top: -18px;
         right: 15px;
     }
-
     .navbar__hamburger__items li {
         padding-bottom: 16px;
         text-decoration: underline;
         font-weight: 700;
     }
-
     .navbar__hamburger__items li a {
         color: #ffffff;
     }
-
     .navbar__hamburger__items li:last-of-type { 
         padding-bottom: 0;
     }
@@ -858,6 +832,5 @@ form p {
     /*O nas*/
     .onas{
         max-width: 100%;
-    }
-    
+    } 
 }
